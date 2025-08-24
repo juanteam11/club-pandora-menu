@@ -9,7 +9,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #f5f3f0;
-    background: linear-gradient(135deg, #0d0d0d 0%, #1a1611 25%, #2d2619 50%, #1a1611 75%, #0d0d0d 100%);
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #111111 50%, #0a0a0a 75%, #000000 100%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -23,9 +23,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 40% 60%, rgba(184, 134, 11, 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(184, 134, 11, 0.03) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -43,14 +43,14 @@ body::before {
     text-align: center;
     margin-bottom: 50px;
     padding: 50px 30px;
-    background: linear-gradient(145deg, #1a1611 0%, #2d2619 50%, #1c1613 100%);
+    background: linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #111111 100%);
     border-radius: 25px;
     box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.9),
+        0 20px 40px rgba(0, 0, 0, 0.95),
         inset 0 1px 0 rgba(212, 175, 55, 0.15),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.7),
-        0 0 30px rgba(212, 175, 55, 0.2);
-    border: 2px solid rgba(212, 175, 55, 0.4);
+        inset 0 -1px 0 rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(212, 175, 55, 0.25);
+    border: 2px solid rgba(212, 175, 55, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -156,15 +156,15 @@ body::before {
 /* Menu Section Styles */
 .menu-section {
     margin-bottom: 50px;
-    background: linear-gradient(145deg, #151109 0%, #282315 50%, #1a140f 100%);
+    background: linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #111111 100%);
     border-radius: 20px;
     padding: 35px;
     box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.8),
-        inset 0 2px 0 rgba(212, 175, 55, 0.1),
-        inset 0 -2px 0 rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(212, 175, 55, 0.15);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+        0 15px 35px rgba(0, 0, 0, 0.9),
+        inset 0 2px 0 rgba(212, 175, 55, 0.12),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -218,17 +218,17 @@ body::before {
 }
 
 .drink-item {
-    background: linear-gradient(145deg, #0f0c05 0%, #1f1a0f 50%, #14110a 100%);
+    background: linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #111111 100%);
     border-radius: 15px;
     padding: 25px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
     box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.7),
-        inset 0 1px 0 rgba(212, 175, 55, 0.08),
-        0 0 15px rgba(212, 175, 55, 0.1);
+        0 8px 25px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(212, 175, 55, 0.1),
+        0 0 20px rgba(212, 175, 55, 0.15);
 }
 
 .drink-item::before {
@@ -297,13 +297,13 @@ body::before {
     text-align: center;
     margin-top: 60px;
     padding: 40px 30px;
-    background: linear-gradient(145deg, #0c0905 0%, #1c1710 50%, #11061b 100%);
+    background: linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #111111 100%);
     border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(212, 175, 55, 0.08),
-        0 0 15px rgba(212, 175, 55, 0.1);
+        0 15px 35px rgba(0, 0, 0, 0.9),
+        inset 0 1px 0 rgba(212, 175, 55, 0.1),
+        0 0 20px rgba(212, 175, 55, 0.15);
     position: relative;
     overflow: hidden;
 }
@@ -426,14 +426,14 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0d0d0d;
+    background: #000000;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, #b8860b, #d4af37, #ffd700);
     border-radius: 5px;
-    border: 2px solid #0d0d0d;
+    border: 2px solid #000000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -441,5 +441,5 @@ body::before {
 }
 
 ::-webkit-scrollbar-corner {
-    background: #0d0d0d;
+    background: #000000;
 }
