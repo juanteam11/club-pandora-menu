@@ -46,7 +46,7 @@ body::before {
     min-height: 400px;
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-        url('pandoralogo.jpeg') center/cover no-repeat,
+        url('../pandoralogo.jpeg') center/cover no-repeat,
         linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #111111 100%);
     background-blend-mode: overlay;
     border-radius: 25px;
