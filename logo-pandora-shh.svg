@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular elegante -->
+  <circle cx="150" cy="150" r="145" fill="#0a0511" stroke="#e91e63" stroke-width="3"/>
+  
+  <!-- Marco interior con gradiente -->
+  <circle cx="150" cy="150" r="125" fill="none" stroke="url(#pinkGoldGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Definir gradientes -->
+  <defs>
+    <linearGradient id="pinkGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1744;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#d81b60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ad1457;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdbcd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffcc9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0a373;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="nailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff1744;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d81b60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Composición unificada: Boca + Dedo "Shh" -->
+  <g transform="translate(150, 140)">
+    <!-- Fondo sutil detrás de la boca -->
+    <ellipse cx="0" cy="5" rx="45" ry="25" fill="#000000" opacity="0.1"/>
+    
+    <!-- Boca sexy más definida -->
+    <g>
+      <!-- Labio superior con mejor definición -->
+      <path d="M -40,0 C -35,-10 -25,-15 -15,-13 C -8,-12 -3,-11 0,-11 C 3,-11 8,-12 15,-13 C 25,-15 35,-10 40,0 C 38,2 35,4 30,6 C 20,10 10,8 5,6 C 2,7 -2,7 -5,6 C -10,8 -20,10 -30,6 C -35,4 -38,2 -40,0 Z" 
+            fill="url(#lipGradient)" stroke="#ad1457" stroke-width="0.5"/>
+      
+      <!-- Labio inferior más voluminoso -->
+      <path d="M -35,6 C -30,18 -20,25 -10,23 C -5,22 0,21 5,22 C 10,23 20,25 30,18 C 35,6 32,8 28,12 C 18,18 8,16 3,14 C 0,15 -3,14 -8,16 C -18,18 -28,12 -32,8 C -35,6 -35,6 -35,6 Z" 
+            fill="url(#lipGradient)" stroke="#ad1457" stroke-width="0.5"/>
+      
+      <!-- Brillo principal en labios -->
+      <ellipse cx="-12" cy="8" rx="15" ry="6" fill="#ffffff" opacity="0.5" transform="rotate(-5)"/>
+      <ellipse cx="12" cy="10" rx="12" ry="4" fill="#ffffff" opacity="0.4" transform="rotate(5)"/>
+      
+      <!-- Línea de separación sensual -->
+      <path d="M -30,6 C -20,9 -10,8 0,7 C 10,8 20,9 30,6" 
+            stroke="#ad1457" stroke-width="2" fill="none" opacity="0.9"/>
+      
+      <!-- Dientes sutiles -->
+      <path d="M -20,7 C -15,9 -8,9 -3,7 C 0,8 3,8 8,7 C 15,9 20,7 20,7" 
+            stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+    
+    <!-- Dedo índice integrado -->
+    <g transform="translate(0, -35)">
+      <!-- Base de la mano más visible -->
+      <ellipse cx="5" cy="40" rx="12" ry="8" fill="url(#skinGradient)" opacity="0.9" transform="rotate(15)"/>
+      
+      <!-- Dedo índice principal -->
+      <ellipse cx="0" cy="15" rx="5" ry="22" fill="url(#skinGradient)" stroke="#e0a373" stroke-width="0.3"/>
+      
+      <!-- Articulaciones del dedo -->
+      <ellipse cx="0" cy="5" rx="4.5" ry="3" fill="url(#skinGradient)" opacity="0.8"/>
+      <ellipse cx="0" cy="25" rx="4.8" ry="3" fill="url(#skinGradient)" opacity="0.8"/>
+      
+      <!-- Uña más realista -->
+      <ellipse cx="0" cy="-5" rx="4" ry="6" fill="url(#nailGradient)" stroke="#ad1457" stroke-width="0.2"/>
+      
+      <!-- Brillo en la uña -->
+      <ellipse cx="-1.5" cy="-6" rx="2" ry="3" fill="#ffffff" opacity="0.8"/>
+      <ellipse cx="0.5" cy="-4" rx="1" ry="1.5" fill="#ffffff" opacity="0.6"/>
+      
+      <!-- Pulgar parcialmente visible -->
+      <ellipse cx="8" cy="30" rx="3" ry="8" fill="url(#skinGradient)" opacity="0.7" transform="rotate(30)"/>
+    </g>
+    
+    <!-- Sombra que une dedo y boca -->
+    <ellipse cx="0" cy="-5" rx="8" ry="4" fill="#000000" opacity="0.15"/>
+    
+    <!-- Efecto de contacto sutil -->
+    <circle cx="0" cy="0" r="2" fill="#ffffff" opacity="0.1"/>
+  </g>
+  
+  <!-- Efectos de seducción alrededor -->
+  <g opacity="0.6">
+    <!-- Corazones flotantes -->
+    <g transform="translate(80,100)">
+      <path d="M 0,-5 C -3,-8 -8,-8 -8,-3 C -8,-8 -13,-8 -16,-5 C -13,0 -8,8 -8,8 C -8,8 -3,0 0,-5 Z" 
+            fill="#ff6b9d" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; 2,-3; 0,0" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <g transform="translate(220,120)">
+      <path d="M 0,-4 C -2,-6 -6,-6 -6,-2 C -6,-6 -10,-6 -12,-4 C -10,0 -6,6 -6,6 C -6,6 -2,0 0,-4 Z" 
+            fill="#ffd700" opacity="0.6">
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; -2,-2; 0,0" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Líneas de atracción -->
+    <path d="M 70,160 Q 80,155 90,160" stroke="url(#pinkGoldGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 210,170 Q 200,165 190,170" stroke="url(#pinkGoldGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+  </g>
+  
+  <!-- Texto del club -->
+  <text x="150" y="220" font-family="serif" font-size="24" font-weight="bold" text-anchor="middle" fill="url(#pinkGoldGradient)">
+    PANDORA
+  </text>
+  
+  <!-- Subtítulo elegante -->
+  <text x="150" y="240" font-family="serif" font-size="12" text-anchor="middle" fill="#ff6b9d" opacity="0.9">
+    EXCLUSIVE CLUB
+  </text>
+  
+  <!-- Mensaje sugerente -->
+  <text x="150" y="255" font-family="serif" font-size="9" text-anchor="middle" fill="#ffd700" opacity="0.8">
+    VIP • DISCRETO • ELEGANTE
+  </text>
+  
+  <!-- Línea decorativa ondulada -->
+  <path d="M 60,270 Q 80,265 100,270 Q 120,275 150,270 Q 180,265 200,270 Q 220,275 240,270" 
+        stroke="url(#pinkGoldGradient)" stroke-width="1.5" fill="none" opacity="0.8"/>
+  
+  <!-- Elementos decorativos en las esquinas -->
+  <g opacity="0.4">
+    <!-- Besos/labios pequeños en las esquinas -->
+    <g transform="translate(40,40) scale(0.3)">
+      <path d="M -20,0 C -15,-5 -10,-6 -5,-4 C 0,-3 5,-4 10,-6 C 15,-5 20,0 15,3 C 10,6 5,4 0,3 C -5,4 -10,6 -15,3 C -20,0 -20,0 -20,0 Z" 
+            fill="#ff6b9d"/>
+    </g>
+    
+    <g transform="translate(260,40) scale(0.3)">
+      <path d="M -20,0 C -15,-5 -10,-6 -5,-4 C 0,-3 5,-4 10,-6 C 15,-5 20,0 15,3 C 10,6 5,4 0,3 C -5,4 -10,6 -15,3 C -20,0 -20,0 -20,0 Z" 
+            fill="#ffd700"/>
+    </g>
+    
+    <g transform="translate(40,260) scale(0.3)">
+      <path d="M -20,0 C -15,-5 -10,-6 -5,-4 C 0,-3 5,-4 10,-6 C 15,-5 20,0 15,3 C 10,6 5,4 0,3 C -5,4 -10,6 -15,3 C -20,0 -20,0 -20,0 Z" 
+            fill="#ffd700"/>
+    </g>
+    
+    <g transform="translate(260,260) scale(0.3)">
+      <path d="M -20,0 C -15,-5 -10,-6 -5,-4 C 0,-3 5,-4 10,-6 C 15,-5 20,0 15,3 C 10,6 5,4 0,3 C -5,4 -10,6 -15,3 C -20,0 -20,0 -20,0 Z" 
+            fill="#ff6b9d"/>
+    </g>
+  </g>
+  
+  <!-- Efecto de brillo sutil -->
+  <circle cx="150" cy="150" r="140" fill="url(#glowEffect)" opacity="0.3"/>
+  
+  <!-- Iniciales estilizadas -->
+  <text x="150" y="285" font-family="serif" font-size="14" font-weight="bold" text-anchor="middle" fill="url(#pinkGoldGradient)" opacity="0.7">
+    P • C
+  </text>
+  
+  <!-- Efectos de partículas brillantes animadas -->
+  <g opacity="0.8">
+    <circle cx="90" cy="80" r="1.5" fill="#ffd700">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="90" r="2" fill="#ff6b9d">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="200" r="1.5" fill="#e91e63">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="190" r="2" fill="#ffd700">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="110" cy="70" r="1" fill="#ff6b9d">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="210" r="1.5" fill="#ffd700">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Mensaje subliminal de secreto -->
+  <g transform="translate(150, 190)" opacity="0.3">
+    <text x="0" y="0" font-family="serif" font-size="8" text-anchor="middle" fill="#ff6b9d" 
+          font-style="italic">our little secret...</text>
+  </g>
+</svg>

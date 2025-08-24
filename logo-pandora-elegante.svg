@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo elegante con gradiente suave -->
+  <circle cx="150" cy="150" r="145" fill="url(#backgroundGradient)" stroke="url(#borderGradient)" stroke-width="2"/>
+  
+  <!-- Definiciones de gradientes y efectos -->
+  <defs>
+    <!-- Gradiente de fondo elegante -->
+    <radialGradient id="backgroundGradient" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a0511;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradiente para bordes -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8860b;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <!-- Gradiente dorado para elementos principales -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente rosa elegante -->
+    <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ad1457;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para la silueta femenina -->
+    <linearGradient id="femineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#fab1a0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fd79a8;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Efecto de brillo suave -->
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#ff6b9d;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Filtro de resplandor -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Silueta femenina elegante central -->
+  <g transform="translate(150, 100)">
+    <!-- Torso y curvas femeninas -->
+    <path d="M 0,-20 
+             C -12,-18 -18,-10 -20,0 
+             C -22,15 -18,25 -15,35
+             C -12,45 -8,55 -5,65
+             C -2,70 2,70 5,65
+             C 8,55 12,45 15,35
+             C 18,25 22,15 20,0
+             C 18,-10 12,-18 0,-20 Z" 
+          fill="url(#femineGradient)" 
+          stroke="url(#goldGradient)" 
+          stroke-width="1.5" 
+          opacity="0.85"
+          filter="url(#glow)"/>
+    
+    <!-- Cabello elegante -->
+    <path d="M 0,-20 
+             C -15,-25 -25,-35 -20,-45
+             C -15,-50 -5,-48 0,-45
+             C 5,-48 15,-50 20,-45
+             C 25,-35 15,-25 0,-20 Z" 
+          fill="url(#goldGradient)" 
+          opacity="0.7"/>
+    
+    <!-- Detalles del rostro -->
+    <circle cx="0" cy="-15" r="8" fill="url(#femineGradient)" opacity="0.6"/>
+    
+    <!-- Collar/joyería elegante -->
+    <ellipse cx="0" cy="10" rx="12" ry="3" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.8"/>
+    <circle cx="0" cy="10" r="2" fill="url(#goldGradient)"/>
+  </g>
+  
+  <!-- Marco decorativo elegante -->
+  <g opacity="0.6">
+    <!-- Ornamentos en las esquinas -->
+    <g transform="translate(75, 75) rotate(45)">
+      <path d="M -15,0 Q -10,-5 -5,0 Q -10,5 -15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+      <path d="M 15,0 Q 10,-5 5,0 Q 10,5 15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+    </g>
+    
+    <g transform="translate(225, 75) rotate(135)">
+      <path d="M -15,0 Q -10,-5 -5,0 Q -10,5 -15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+      <path d="M 15,0 Q 10,-5 5,0 Q 10,5 15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+    </g>
+    
+    <g transform="translate(75, 225) rotate(-45)">
+      <path d="M -15,0 Q -10,-5 -5,0 Q -10,5 -15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+      <path d="M 15,0 Q 10,-5 5,0 Q 10,5 15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+    </g>
+    
+    <g transform="translate(225, 225) rotate(-135)">
+      <path d="M -15,0 Q -10,-5 -5,0 Q -10,5 -15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+      <path d="M 15,0 Q 10,-5 5,0 Q 10,5 15,0" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Elementos florales elegantes -->
+  <g opacity="0.5">
+    <!-- Rosa estilizada lado izquierdo -->
+    <g transform="translate(60, 120) scale(0.8)">
+      <circle cx="0" cy="0" r="8" fill="url(#pinkGradient)" opacity="0.7"/>
+      <circle cx="0" cy="0" r="5" fill="url(#pinkGradient)" opacity="0.9"/>
+      <circle cx="0" cy="0" r="2" fill="url(#goldGradient)"/>
+      <!-- Pétalos -->
+      <ellipse cx="-6" cy="-3" rx="4" ry="8" fill="url(#pinkGradient)" opacity="0.4" transform="rotate(-30)"/>
+      <ellipse cx="6" cy="-3" rx="4" ry="8" fill="url(#pinkGradient)" opacity="0.4" transform="rotate(30)"/>
+      <ellipse cx="0" cy="-8" rx="6" ry="4" fill="url(#pinkGradient)" opacity="0.4"/>
+    </g>
+    
+    <!-- Rosa lado derecho -->
+    <g transform="translate(240, 180) scale(0.6) rotate(45)">
+      <circle cx="0" cy="0" r="6" fill="url(#pinkGradient)" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="url(#goldGradient)"/>
+      <ellipse cx="-4" cy="-2" rx="3" ry="6" fill="url(#pinkGradient)" opacity="0.3" transform="rotate(-20)"/>
+      <ellipse cx="4" cy="-2" rx="3" ry="6" fill="url(#pinkGradient)" opacity="0.3" transform="rotate(20)"/>
+    </g>
+  </g>
+  
+  <!-- Corona/tiara elegante -->
+  <g transform="translate(150, 45)">
+    <path d="M -25,0 L -15,-8 L -5,-5 L 0,-12 L 5,-5 L 15,-8 L 25,0 L 20,5 L -20,5 Z" 
+          fill="url(#goldGradient)" 
+          stroke="url(#goldGradient)" 
+          stroke-width="1" 
+          opacity="0.8"/>
+    <!-- Gemas de la corona -->
+    <circle cx="-15" cy="-4" r="2" fill="url(#pinkGradient)"/>
+    <circle cx="0" cy="-8" r="3" fill="url(#pinkGradient)"/>
+    <circle cx="15" cy="-4" r="2" fill="url(#pinkGradient)"/>
+  </g>
+  
+  <!-- Texto principal PANDORA -->
+  <text x="150" y="230" 
+        font-family="serif" 
+        font-size="28" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="url(#goldGradient)"
+        filter="url(#glow)">
+    PANDORA
+  </text>
+  
+  <!-- Subtítulo elegante -->
+  <text x="150" y="250" 
+        font-family="serif" 
+        font-size="11" 
+        font-style="italic"
+        text-anchor="middle" 
+        fill="url(#pinkGradient)" 
+        opacity="0.9">
+    EXCLUSIVE CLUB
+  </text>
+  
+  <!-- Lema elegante -->
+  <text x="150" y="268" 
+        font-family="serif" 
+        font-size="9" 
+        text-anchor="middle" 
+        fill="url(#goldGradient)" 
+        opacity="0.7" 
+        font-style="italic">
+    "Where Beauty Meets Elegance"
+  </text>
+  
+  <!-- Líneas decorativas -->
+  <g transform="translate(150, 280)" opacity="0.7">
+    <path d="M -60,0 Q -40,-3 -20,0 Q 0,3 20,0 Q 40,-3 60,0" 
+          stroke="url(#goldGradient)" 
+          stroke-width="1.5" 
+          fill="none"/>
+    <!-- Ornamentos en la línea -->
+    <circle cx="-40" cy="0" r="1.5" fill="url(#pinkGradient)"/>
+    <circle cx="0" cy="0" r="2" fill="url(#goldGradient)"/>
+    <circle cx="40" cy="0" r="1.5" fill="url(#pinkGradient)"/>
+  </g>
+  
+  <!-- Partículas de elegancia -->
+  <g opacity="0.4">
+    <circle cx="80" cy="80" r="1" fill="url(#goldGradient)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="90" r="1.5" fill="url(#pinkGradient)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="200" r="1.2" fill="url(#goldGradient)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="230" cy="210" r="1" fill="url(#pinkGradient)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Resplandor general -->
+  <circle cx="150" cy="150" r="140" fill="url(#glowEffect)" opacity="0.3"/>
+</svg>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular elegante -->
+  <circle cx="150" cy="150" r="145" fill="#0a0511" stroke="#e91e63" stroke-width="3"/>
+  
+  <!-- Marco interior con gradiente -->
+  <circle cx="150" cy="150" r="125" fill="none" stroke="url(#pinkGoldGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Definir gradientes -->
+  <defs>
+    <linearGradient id="pinkGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="poleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="femmeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Tubo/Poste central -->
+  <rect x="147" y="80" width="6" height="120" fill="url(#poleGradient)" rx="3"/>
+  
+  <!-- Base del tubo -->
+  <ellipse cx="150" cy="200" rx="20" ry="4" fill="url(#poleGradient)" opacity="0.8"/>
+  
+  <!-- Silueta femenina en el tubo -->
+  <g transform="translate(150, 135)">
+    <!-- Cabeza con forma realista -->
+    <ellipse cx="0" cy="-35" rx="6" ry="8" fill="url(#femmeGradient)"/>
+    
+    <!-- Cabello largo y voluminoso -->
+    <path d="M -8,-42 C -15,-45 -18,-40 -15,-38 C -12,-36 -8,-37 -6,-40 C -4,-38 -2,-40 0,-42 C 2,-40 4,-38 6,-40 C 8,-37 12,-36 15,-38 C 18,-40 15,-45 8,-42 C 4,-44 -4,-44 -8,-42 Z" 
+          fill="url(#femmeGradient)" opacity="0.8"/>
+    
+    <!-- Cuello -->
+    <rect x="-2" y="-27" width="4" height="6" fill="url(#femmeGradient)" rx="2"/>
+    
+    <!-- Torso femenino con curvas realistas -->
+    <!-- Hombros y pecho -->
+    <path d="M -8,-21 C -10,-19 -11,-16 -11,-13 C -11,-10 -10,-8 -8,-6 C -6,-5 -4,-4 -2,-4 C 0,-4 2,-4 4,-4 C 6,-5 8,-6 10,-8 C 11,-10 11,-13 10,-16 C 9,-19 7,-21 4,-21 C 2,-22 -2,-22 -4,-21 C -6,-21 -7,-21 -8,-21 Z" 
+          fill="url(#femmeGradient)"/>
+    
+    <!-- Cintura -->
+    <path d="M -6,-4 C -7,-2 -7,2 -6,6 C -5,8 -3,10 0,10 C 3,10 5,8 6,6 C 7,2 7,-2 6,-4 C 4,-5 2,-5 0,-5 C -2,-5 -4,-5 -6,-4 Z" 
+          fill="url(#femmeGradient)"/>
+    
+    <!-- Caderas -->
+    <path d="M -6,6 C -9,8 -11,12 -10,16 C -9,20 -7,22 -4,24 C -2,25 0,25 2,24 C 5,22 7,20 8,16 C 9,12 7,8 4,6 C 2,5 -2,5 -6,6 Z" 
+          fill="url(#femmeGradient)"/>
+    
+    <!-- Brazo izquierdo (agarrando el tubo) -->
+    <!-- Brazo superior -->
+    <path d="M -8,-18 C -12,-19 -15,-17 -16,-14 C -17,-11 -16,-8 -14,-6" 
+          stroke="url(#femmeGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Antebrazo -->
+    <path d="M -14,-6 C -13,-3 -12,0 -11,3" 
+          stroke="url(#femmeGradient)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Mano en el tubo -->
+    <ellipse cx="-11" cy="4" rx="2" ry="4" fill="url(#femmeGradient)"/>
+    
+    <!-- Brazo derecho extendido elegantemente -->
+    <!-- Brazo superior -->
+    <path d="M 8,-16 C 14,-18 18,-16 22,-12 C 24,-9 23,-6 21,-4" 
+          stroke="url(#femmeGradient)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Antebrazo -->
+    <path d="M 21,-4 C 23,-2 25,0 26,3" 
+          stroke="url(#femmeGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Mano -->
+    <ellipse cx="27" cy="4" rx="1.5" ry="3" fill="url(#femmeGradient)"/>
+    
+    <!-- Pierna derecha (en el suelo) -->
+    <!-- Muslo -->
+    <path d="M 4,24 C 6,32 5,40 4,46" 
+          stroke="url(#femmeGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Pantorrilla -->
+    <path d="M 4,46 C 3,52 2,58 1,64" 
+          stroke="url(#femmeGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Pie con tacón -->
+    <ellipse cx="1" cy="66" rx="1.5" ry="2" fill="url(#femmeGradient)"/>
+    <rect x="-1" y="67" width="4" height="2" fill="#000000" opacity="0.8" rx="1"/> <!-- tacón -->
+    
+    <!-- Pierna izquierda (elevada en pose de baile) -->
+    <!-- Muslo -->
+    <path d="M -4,24 C -8,28 -12,32 -15,36" 
+          stroke="url(#femmeGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Pantorrilla -->
+    <path d="M -15,36 C -17,40 -18,44 -19,48" 
+          stroke="url(#femmeGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Pie con tacón -->
+    <ellipse cx="-19" cy="50" rx="1.5" ry="2" fill="url(#femmeGradient)"/>
+    <rect x="-20" y="51" width="3" height="2" fill="#000000" opacity="0.8" rx="1"/> <!-- tacón -->
+    
+    <!-- Detalles femeninos -->
+    <!-- Collar/joyería -->
+    <circle cx="-2" cy="-22" r="0.8" fill="#ffd700" opacity="0.9"/>
+    <circle cx="2" cy="-22" r="0.8" fill="#ffd700" opacity="0.9"/>
+    <path d="M -2,-22 Q 0,-24 2,-22" stroke="#ffd700" stroke-width="0.5" fill="none" opacity="0.8"/>
+    
+    <!-- Pulseras -->
+    <circle cx="27" cy="2" r="1" stroke="#ffd700" stroke-width="0.5" fill="none" opacity="0.8"/>
+    
+    <!-- Detalles del cabello (mechones) -->
+    <path d="M -12,-38 C -16,-35 -14,-32 -10,-35" stroke="url(#femmeGradient)" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M 12,-38 C 16,-35 14,-32 10,-35" stroke="url(#femmeGradient)" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Efectos de movimiento/danza alrededor -->
+  <g opacity="0.6">
+    <!-- Líneas de movimiento -->
+    <path d="M 120,120 Q 130,115 140,120" stroke="url(#pinkGoldGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 180,130 Q 170,125 160,130" stroke="url(#pinkGoldGradient)" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 110,160 Q 120,155 130,160" stroke="url(#pinkGoldGradient)" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 190,170 Q 180,165 170,170" stroke="url(#pinkGoldGradient)" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Texto del club -->
+  <text x="150" y="235" font-family="serif" font-size="22" font-weight="bold" text-anchor="middle" fill="url(#pinkGoldGradient)">
+    PANDORA
+  </text>
+  
+  <!-- Subtítulo elegante -->
+  <text x="150" y="255" font-family="serif" font-size="11" text-anchor="middle" fill="#ff6b9d" opacity="0.9">
+    EXCLUSIVE POLE CLUB
+  </text>
+  
+  <!-- Línea decorativa ondulada -->
+  <path d="M 70,270 Q 90,265 110,270 Q 130,275 150,270 Q 170,265 190,270 Q 210,275 230,270" 
+        stroke="url(#pinkGoldGradient)" stroke-width="1.5" fill="none" opacity="0.8"/>
+  
+  <!-- Elementos decorativos en las esquinas -->
+  <g opacity="0.5">
+    <!-- Estrellas/brillos en las esquinas -->
+    <g transform="translate(50,50)">
+      <path d="M 0,-8 L 2,-2 L 8,0 L 2,2 L 0,8 L -2,2 L -8,0 L -2,-2 Z" fill="#ffd700"/>
+    </g>
+    
+    <g transform="translate(250,50)">
+      <path d="M 0,-6 L 1.5,-1.5 L 6,0 L 1.5,1.5 L 0,6 L -1.5,1.5 L -6,0 L -1.5,-1.5 Z" fill="#ff6b9d"/>
+    </g>
+    
+    <g transform="translate(50,250)">
+      <path d="M 0,-6 L 1.5,-1.5 L 6,0 L 1.5,1.5 L 0,6 L -1.5,1.5 L -6,0 L -1.5,-1.5 Z" fill="#ff6b9d"/>
+    </g>
+    
+    <g transform="translate(250,250)">
+      <path d="M 0,-8 L 2,-2 L 8,0 L 2,2 L 0,8 L -2,2 L -8,0 L -2,-2 Z" fill="#ffd700"/>
+    </g>
+  </g>
+  
+  <!-- Efecto de brillo sutil -->
+  <circle cx="150" cy="150" r="140" fill="url(#glowEffect)" opacity="0.3"/>
+  
+  <!-- Iniciales estilizadas -->
+  <text x="150" y="290" font-family="serif" font-size="16" font-weight="bold" text-anchor="middle" fill="url(#pinkGoldGradient)" opacity="0.8">
+    P • C
+  </text>
+  
+  <!-- Efectos de partículas brillantes animadas -->
+  <g opacity="0.7">
+    <circle cx="80" cy="90" r="1.5" fill="#ffd700">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="100" r="2" fill="#ff6b9d">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="210" r="1.5" fill="#e91e63">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="200" r="2" fill="#ffd700">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="80" r="1" fill="#ff6b9d">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="220" r="1.5" fill="#ffd700">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

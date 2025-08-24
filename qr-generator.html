@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador QR - Club Pandora</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 50%, #1a1a1a 100%);
+            color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #ffd700;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #b19cd9;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #f0f0f0;
+            font-size: 16px;
+        }
+        input::placeholder {
+            color: #cccccc;
+        }
+        button {
+            background: linear-gradient(45deg, #ffd700, #b19cd9);
+            color: #1a1a1a;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        #qrcode {
+            margin: 30px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #ffd700;
+        }
+        .instructions h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .instructions p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .default-url {
+            color: #b19cd9;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 Generador QR<br>Club Pandora</h1>
+        
+        <div class="input-group">
+            <label for="menuUrl">URL del Menú:</label>
+            <input type="url" id="menuUrl" placeholder="https://tu-servidor.com/club-secret-menu/">
+            <div class="default-url">
+                Deja vacío para usar: file://[ruta-local]/index.html
+            </div>
+        </div>
+        
+        <button onclick="generateQR()">🔮 Generar Código QR</button>
+        <button onclick="downloadQR()">📱 Descargar QR</button>
+        
+        <div id="qrcode"></div>
+        
+        <div class="instructions">
+            <h3>📋 Instrucciones de Uso:</h3>
+            <p><strong>1.</strong> Si tu menú ya está en un servidor web, introduce la URL completa.</p>
+            <p><strong>2.</strong> Para uso local, deja el campo vacío y el QR apuntará al archivo local.</p>
+            <p><strong>3.</strong> Haz clic en "Generar Código QR" para crear el código.</p>
+            <p><strong>4.</strong> Usa "Descargar QR" para guardar la imagen.</p>
+            <p><strong>5.</strong> Imprime y coloca el QR en las mesas del club.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentQRCode = null;
+        let currentURL = '';
+        let qrLibraryLoaded = false;
+
+        // Check if QRCode library is loaded
+        function checkLibrary() {
+            if (typeof QRCode !== 'undefined') {
+                qrLibraryLoaded = true;
+                console.log('QRCode library loaded successfully');
+                return true;
+            }
+            return false;
+        }
+
+        function generateQR() {
+            // Check if library is loaded
+            if (!checkLibrary()) {
+                alert('Error: No se pudo cargar la librería QR. Verifica tu conexión a internet.');
+                console.error('QRCode library not loaded');
+                return;
+            }
+
+            const urlInput = document.getElementById('menuUrl');
+            let menuUrl = urlInput.value.trim();
+            
+            // If no URL provided, use local file path
+            if (!menuUrl) {
+                menuUrl = window.location.href.replace('qr-generator.html', 'index.html');
+            }
+            
+            currentURL = menuUrl;
+            console.log('Generating QR for URL:', menuUrl);
+            
+            // Clear previous QR code
+            const qrContainer = document.getElementById('qrcode');
+            qrContainer.innerHTML = '<p style="color: #ffd700; margin: 10px;">Generando código QR...</p>';
+            
+            try {
+                // Generate QR code
+                QRCode.toCanvas(qrContainer, menuUrl, {
+                    width: 300,
+                    height: 300,
+                    colorDark: '#1a1a1a',
+                    colorLight: '#ffffff',
+                    margin: 2,
+                    errorCorrectionLevel: 'M'
+                }, function (error) {
+                    if (error) {
+                        console.error('QR Generation Error:', error);
+                        qrContainer.innerHTML = '<p style="color: #ff6b6b; margin: 10px;">❌ Error al generar el código QR.<br>Intenta con una URL más corta o verifica la conexión a internet.</p>';
+                    } else {
+                        console.log('QR Code generated successfully for:', menuUrl);
+                        currentQRCode = qrContainer.querySelector('canvas');
+                        
+                        // Add success message
+                        const successMsg = document.createElement('p');
+                        successMsg.style.color = '#4CAF50';
+                        successMsg.style.marginTop = '10px';
+                        successMsg.innerHTML = '✅ Código QR generado exitosamente';
+                        qrContainer.appendChild(successMsg);
+                    }
+                });
+            } catch (err) {
+                console.error('Unexpected error:', err);
+                qrContainer.innerHTML = '<p style="color: #ff6b6b; margin: 10px;">❌ Error inesperado al generar el código QR.</p>';
+            }
+        }
+
+        function downloadQR() {
+            if (!currentQRCode) {
+                alert('Primero genera un código QR exitosamente');
+                return;
+            }
+            
+            try {
+                // Create download link
+                const link = document.createElement('a');
+                link.download = 'club-secret-menu-qr.png';
+                link.href = currentQRCode.toDataURL('image/png');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                console.log('QR code downloaded successfully');
+            } catch (err) {
+                console.error('Download error:', err);
+                alert('Error al descargar el código QR');
+            }
+        }
+
+        // Test function to use a simple URL
+        function testWithSimpleURL() {
+            document.getElementById('menuUrl').value = 'https://example.com';
+            generateQR();
+        }
+
+        // Wait for library to load and page to be ready
+        window.addEventListener('load', function() {
+            console.log('Page loaded, checking QR library...');
+            
+            // Wait a bit more for the CDN library to load
+            setTimeout(function() {
+                if (checkLibrary()) {
+                    console.log('Generating default QR...');
+                    generateQR();
+                } else {
+                    console.error('QRCode library failed to load from CDN');
+                    document.getElementById('qrcode').innerHTML = 
+                        '<p style="color: #ff6b6b; margin: 20px;">❌ Error: No se pudo cargar la librería QR.<br>' +
+                        'Verifica tu conexión a internet y recarga la página.</p>' +
+                        '<button onclick="location.reload()" style="background: #ff6b6b; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">🔄 Recargar Página</button>';
+                }
+            }, 1000);
+        });
+
+        // Add test button functionality
+        window.addEventListener('DOMContentLoaded', function() {
+            // Add a test button after the other buttons
+            const container = document.querySelector('.container');
+            const testButton = document.createElement('button');
+            testButton.onclick = testWithSimpleURL;
+            testButton.innerHTML = '🧪 Probar con URL Simple';
+            testButton.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+            container.insertBefore(testButton, document.getElementById('qrcode'));
+        });
+    </script>
+</body>
+</html>

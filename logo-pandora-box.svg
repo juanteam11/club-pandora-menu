@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular elegante -->
+  <circle cx="150" cy="150" r="145" fill="#000000" stroke="#8B4513" stroke-width="3"/>
+  
+  <!-- Marco interior con gradiente -->
+  <circle cx="150" cy="150" r="125" fill="none" stroke="url(#darkGoldGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Aura siniestra de fondo -->
+  <circle cx="150" cy="150" r="120" fill="url(#sinisterGlow)" opacity="0.4"/>
+  
+  <!-- Definir gradientes y efectos -->
+  <defs>
+    <linearGradient id="darkGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#0d0d0d;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d2d;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="maskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:0.95" />
+      <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#d0d0d0;stop-opacity:0.85" />
+    </linearGradient>
+    
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="lightBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#B8860B;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="sinisterGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#4B0000;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Caja de Pandora central -->
+  <g transform="translate(150, 130)">
+    <!-- Base de la caja -->
+    <rect x="-30" y="10" width="60" height="35" fill="url(#boxGradient)" rx="5" 
+          stroke="url(#goldTrim)" stroke-width="2"/>
+    
+    <!-- Decoraciones en la base -->
+    <rect x="-28" y="12" width="56" height="3" fill="url(#goldTrim)" opacity="0.8"/>
+    <rect x="-28" y="37" width="56" height="3" fill="url(#goldTrim)" opacity="0.8"/>
+    
+    <!-- Tapa de la caja (entreabierta) -->
+    <g transform="translate(0, -5) rotate(-15)">
+      <rect x="-30" y="-5" width="60" height="20" fill="url(#boxGradient)" rx="5" 
+            stroke="url(#goldTrim)" stroke-width="2"/>
+      
+      <!-- Decoración de la tapa -->
+      <rect x="-28" y="-3" width="56" height="3" fill="url(#goldTrim)" opacity="0.8"/>
+      <rect x="-28" y="10" width="56" height="3" fill="url(#goldTrim)" opacity="0.8"/>
+      
+      <!-- Cerradura ornamental -->
+      <circle cx="0" cy="5" r="4" fill="url(#goldTrim)" opacity="0.9"/>
+      <circle cx="0" cy="5" r="2" fill="#0a0511"/>
+    </g>
+    
+    <!-- Bisagras -->
+    <circle cx="-25" cy="5" r="2" fill="url(#goldTrim)"/>
+    <circle cx="25" cy="5" r="2" fill="url(#goldTrim)"/>
+    
+    <!-- Luz mística saliendo de la caja -->
+    <g opacity="0.7">
+      <path d="M -20,-15 L -10,-35 L 10,-35 L 20,-15 Z" fill="url(#lightBeam)"/>
+      <path d="M -15,-15 L -8,-40 L 8,-40 L 15,-15 Z" fill="url(#lightBeam)" opacity="0.6"/>
+      <path d="M -10,-15 L -5,-45 L 5,-45 L 10,-15 Z" fill="url(#lightBeam)" opacity="0.4"/>
+    </g>
+    
+    <!-- Partículas mágicas saliendo -->
+    <g opacity="0.8">
+      <circle cx="-15" cy="-25" r="1.5" fill="#DAA520">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; -5,-10; 0,0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="-35" r="2" fill="#B8860B">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; 0,-8; 0,0" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="12" cy="-28" r="1" fill="#8B4513">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; 3,-12; 0,0" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Máscara izquierda (estilo veneciano) -->
+  <g transform="translate(80, 110) rotate(-15)">
+    <!-- Base de la máscara -->
+    <path d="M -20,0 C -25,-5 -25,-15 -20,-20 C -15,-25 -5,-25 0,-20 C 5,-25 15,-25 20,-20 C 25,-15 25,-5 20,0 C 15,5 5,8 0,5 C -5,8 -15,5 -20,0 Z" 
+          fill="url(#maskGradient)" stroke="url(#goldTrim)" stroke-width="1.5" opacity="0.9"/>
+    
+    <!-- Agujeros de los ojos -->
+    <ellipse cx="-8" cy="-8" rx="4" ry="6" fill="#0a0511"/>
+    <ellipse cx="8" cy="-8" rx="4" ry="6" fill="#0a0511"/>
+    
+    <!-- Decoraciones ornamentales -->
+    <path d="M -15,-15 Q -12,-18 -10,-15 Q -8,-12 -10,-10" stroke="url(#goldTrim)" stroke-width="1" fill="none"/>
+    <path d="M 15,-15 Q 12,-18 10,-15 Q 8,-12 10,-10" stroke="url(#goldTrim)" stroke-width="1" fill="none"/>
+    <circle cx="0" cy="-5" r="2" fill="url(#goldTrim)" opacity="0.8"/>
+    
+    <!-- Plumas decorativas -->
+    <path d="M -20,-15 C -25,-20 -28,-25 -25,-30 C -22,-25 -18,-20 -15,-18" 
+          fill="url(#darkGoldGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Máscara derecha (estilo elegante) -->
+  <g transform="translate(220, 120) rotate(10)">
+    <!-- Base de la máscara -->
+    <path d="M -18,0 C -22,-5 -22,-12 -18,-17 C -14,-22 -6,-22 0,-17 C 6,-22 14,-22 18,-17 C 22,-12 22,-5 18,0 C 14,5 6,7 0,5 C -6,7 -14,5 -18,0 Z" 
+          fill="url(#maskGradient)" stroke="url(#goldTrim)" stroke-width="1.5" opacity="0.9"/>
+    
+    <!-- Agujeros de los ojos con estilo -->
+    <ellipse cx="-7" cy="-7" rx="3.5" ry="5" fill="#0a0511"/>
+    <ellipse cx="7" cy="-7" rx="3.5" ry="5" fill="#0a0511"/>
+    
+    <!-- Decoraciones diamantes -->
+    <path d="M 0,-12 L 2,-8 L 0,-4 L -2,-8 Z" fill="url(#goldTrim)"/>
+    <circle cx="-10" cy="-10" r="1.5" fill="url(#goldTrim)" opacity="0.9"/>
+    <circle cx="10" cy="-10" r="1.5" fill="url(#goldTrim)" opacity="0.9"/>
+    
+    <!-- Bastón/vara elegante -->
+    <rect x="-1" y="5" width="2" height="25" fill="url(#goldTrim)" transform="rotate(-10)"/>
+    <circle cx="0" cy="30" r="3" fill="url(#goldTrim)" transform="translate(-2, 0)"/>
+  </g>
+  
+  <!-- Efectos decorativos alrededor -->
+  <g opacity="0.5">
+    <!-- Llaves mysteriosas flotantes -->
+    <g transform="translate(70, 180)">
+      <path d="M 0,0 L 15,0 M 10,-3 L 15,-3 M 10,3 L 15,3" stroke="url(#goldTrim)" stroke-width="1.5" 
+            fill="none" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" 
+                         values="0; 10; -5; 0" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="0" cy="0" r="3" fill="none" stroke="url(#goldTrim)" stroke-width="1.5"/>
+    </g>
+    
+    <g transform="translate(230, 190)">
+      <path d="M 0,0 L 12,0 M 8,-2 L 12,-2 M 8,2 L 12,2" stroke="url(#goldTrim)" stroke-width="1.5" 
+            fill="none" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" 
+                         values="0; -8; 12; 0" dur="3.5s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="0" cy="0" r="2.5" fill="none" stroke="url(#goldTrim)" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Texto del club -->
+  <text x="150" y="235" font-family="serif" font-size="26" font-weight="bold" text-anchor="middle" fill="url(#darkGoldGradient)">
+    PANDORA
+  </text>
+  
+  <!-- Subtítulo elegante -->
+  <text x="150" y="255" font-family="serif" font-size="12" text-anchor="middle" fill="#B8860B" opacity="0.9">
+    EXCLUSIVE CLUB
+  </text>
+  
+  <!-- Mensaje místico -->
+  <text x="150" y="270" font-family="serif" font-size="8" text-anchor="middle" fill="#DAA520" opacity="0.8" font-style="italic">
+    "Unlock the Darkness"
+  </text>
+  
+  <!-- Línea decorativa con ornamentos -->
+  <g transform="translate(150, 280)" opacity="0.6">
+    <path d="M -80,0 Q -60,-5 -40,0 Q -20,5 0,0 Q 20,-5 40,0 Q 60,5 80,0" 
+          stroke="url(#darkGoldGradient)" stroke-width="1.5" fill="none"/>
+    <circle cx="-60" cy="0" r="2" fill="url(#goldTrim)"/>
+    <circle cx="0" cy="0" r="2.5" fill="url(#goldTrim)"/>
+    <circle cx="60" cy="0" r="2" fill="url(#goldTrim)"/>
+  </g>
+  
+  <!-- Efectos de brillo general -->
+  <circle cx="150" cy="150" r="140" fill="url(#glowEffect)" opacity="0.3"/>
+  
+  <!-- Partículas ambientales -->
+  <g opacity="0.6">
+    <circle cx="60" cy="60" r="1" fill="#DAA520">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="70" r="1.5" fill="#B8860B">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="240" r="1.2" fill="#8B4513">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="230" cy="230" r="1" fill="#DAA520">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
