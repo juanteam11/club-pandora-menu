@@ -1,132 +1,128 @@
-# 🎭 Club Secret - Menú Digital con Código QR
+# 🌟 Club Pandora - Proyecto Web Completo
 
-Una solución completa para mostrar el menú de bebidas del Club Secret mediante códigos QR que los clientes pueden escanear desde sus mesas.
+> **WHERE BEAUTY MEETS ELEGANCE**
+> 
+> El club más exclusivo de Palma de Mallorca
 
-## 📱 ¿Qué incluye este proyecto?
-
-- **Menú Digital Interactivo**: Página web responsive con el listado completo de bebidas
-- **Generador de Códigos QR**: Herramientas para crear QR codes que dirijan al menú
-- **Diseño Profesional**: Tema visual elegante apropiado para un club nocturno
-- **Compatible con Móviles**: Optimizado para verse perfectamente en smartphones
-
-## 🚀 Archivos del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
-club-secret-menu/
-├── index.html          # Página principal del menú
-├── css/
-│   └── styles.css      # Estilos del menú (tema club nocturno)
-├── js/
-│   └── menu.js         # Funcionalidades interactivas
-├── qr-generator.html   # Generador de QR en el navegador
-├── generate_qr.py      # Script Python para generar QR
-└── README.md           # Este archivo de instrucciones
+club-pandora-online/
+├── 📄 index.html                    # MENÚ DE BEBIDAS
+├── 📄 pandoralogo.jpeg              # Logo oficial
+├── 📁 css/
+│   └── styles.css                   # Estilos del menú
+├── 📁 js/
+│   └── menu.js                      # JavaScript del menú
+├── 📁 oficial-pandora/              # 🌟 PÁGINA OFICIAL INDEPENDIENTE
+│   ├── 📄 index.html                # Página principal del club
+│   ├── 📄 pandoralogo.jpeg          # Logo oficial (copia)
+│   ├── 📁 css/
+│   │   └── styles.css               # Estilos página oficial
+│   └── 📁 js/
+│       └── main.js                  # JavaScript interactivo
+└── 📁 logos/                        # Otros archivos de logo
 ```
 
-## 🎯 Uso Rápido
+## 🎯 **Dos Proyectos Independientes**
 
-### Opción 1: Generador Web (Recomendado)
-1. Abre `qr-generator.html` en tu navegador
-2. Deja la URL vacía para usar el archivo local o introduce tu URL web
-3. Haz clic en "Generar Código QR"
-4. Descarga la imagen del QR
-5. ¡Imprime y coloca en las mesas!
+### 1. 🍸 **Menú de Bebidas** (Carpeta Principal)
+- **Archivo**: `index.html`
+- **Propósito**: Carta de bebidas premium con códigos QR
+- **Funcionalidades**:
+  - Hero section con logo como fondo
+  - Mensaje "WHERE BEAUTY MEETS ELEGANCE"
+  - Menú completo de bebidas organizadas por categorías
+  - Diseño premium con paleta dorada/rosa
+  - Enlace a página oficial
 
-### Opción 2: Script Python
-```bash
-# Instalar dependencias
-pip install qrcode[pil] pillow
+### 2. 🌟 **Página Oficial del Club** (Carpeta `oficial-pandora/`)
+- **Archivo**: `oficial-pandora/index.html`
+- **Propósito**: Web completa del club con todas las secciones
+- **Funcionalidades**:
+  - ✅ **Hero Section** - Presentación principal
+  - ✅ **Lugar** - Descripción del club
+  - ✅ **Chicas** - Perfiles del personal
+  - ✅ **Ubicación** - Dirección y contacto
+  - ✅ **Calendario** - Eventos próximos
+  - ✅ **Servicios** - Paquetes VIP
+  - ✅ **Entradas** - Sistema de compra
+  - ✅ **Footer** - Enlaces y redes sociales
 
-# Generar QR con URL personalizada
-python generate_qr.py "https://tu-servidor.com/menu"
+## 🔗 **Navegación Entre Proyectos**
 
-# O generar QR para uso local
-python generate_qr.py
-```
+### Desde el Menú → Página Oficial:
+- Botón dorado "🌟 Página Oficial del Club" en el footer
+- Enlace: `oficial-pandora/index.html`
 
-## 🌐 Configuración para Servidor Web
+### Desde Página Oficial → Menú:
+- Botón "🍸 Menú" en la navegación principal
+- Enlace: `../index.html`
 
-Si quieres alojar el menú en un servidor web:
+## 🎨 **Características Técnicas**
 
-1. Sube todos los archivos a tu servidor web
-2. Asegúrate de que `index.html` sea accesible
-3. Usa la URL completa al generar el QR
-4. Ejemplo: `https://clubsecret.com/menu/`
+### Menú de Bebidas:
+- CSS premium con efectos dorados
+- Hero section con logo como fondo
+- Grid responsive para bebidas
+- Paleta de colores luxury
 
-## 📋 Menú Actual
+### Página Oficial:
+- Navegación fija con glassmorphism
+- Animaciones avanzadas con Intersection Observer
+- Sistema de notificaciones interactivo
+- Modales para eventos
+- Loading screen animado
+- Efectos parallax
+- Responsive design completo
 
-El menú incluye las siguientes categorías:
+## 🚀 **Cómo Usar**
 
-- **Cocktails Premium** (Secret Manhattan, Mystique Martini, etc.)
-- **Cocktails Signature** (Club Secret Especial, Midnight Kiss, etc.)
-- **Shots Premium** (Tequila Don Julio, Whiskey Jack Daniel's, etc.)
-- **Cervezas** (Corona, Heineken, Stella Artois, etc.)
-- **Vinos** (Malbec, Sauvignon Blanc, Prosecco, etc.)
-- **Sin Alcohol** (Virgin Mojito, jugos naturales, etc.)
+### Para ver el Menú:
+1. Abrir `index.html` en el navegador
+2. Ver la carta de bebidas premium
 
-## ✏️ Personalización
+### Para ver la Página Oficial:
+1. Hacer clic en "🌟 Página Oficial del Club" desde el menú
+2. O abrir directamente `oficial-pandora/index.html`
 
-### Modificar Bebidas
-Edita el archivo `index.html` en las secciones `<div class="drink-item">` para:
-- Cambiar nombres de bebidas
-- Actualizar descripciones
-- Modificar precios
-- Agregar/quitar categorías
+## 💻 **Desarrollo**
 
-### Cambiar Colores y Estilo
-Modifica el archivo `css/styles.css` para:
-- Cambiar la paleta de colores
-- Ajustar tipografías
-- Modificar efectos visuales
-- Adaptar el responsive design
+### Archivos a Editar:
 
-### Información del Club
-En `index.html`, actualiza la sección `<footer>` con:
-- Dirección real del club
-- Número de teléfono para reservas
-- Redes sociales
+#### Para el Menú:
+- `index.html` - Contenido del menú
+- `css/styles.css` - Estilos del menú
+- `js/menu.js` - JavaScript del menú
 
-## 📱 Cómo Usar los QR Codes
+#### Para la Página Oficial:
+- `oficial-pandora/index.html` - Contenido de la página
+- `oficial-pandora/css/styles.css` - Estilos de la página oficial
+- `oficial-pandora/js/main.js` - JavaScript interactivo
 
-1. **Impresión**: Imprime los códigos QR en tamaño mínimo 5x5 cm
-2. **Ubicación**: Coloca en cada mesa o en lugares visibles
-3. **Material**: Usa material resistente (plastificado recomendado)
-4. **Instrucciones**: Agrega texto "Escanea para ver nuestro menú"
+## 🌟 **Ventajas de la Separación**
 
-## 🎨 Características del Diseño
+1. **Independencia Total**: Cada proyecto es autónomo
+2. **Facilidad de Mantenimiento**: Cambios en uno no afectan al otro
+3. **Escalabilidad**: Se pueden desarrollar por separado
+4. **Organización**: Estructura clara y lógica
+5. **Enlaces Preservados**: Navegación fluida entre ambos
 
-- **Tema Nocturno**: Colores dorados y púrpuras elegantes
-- **Efectos Visuales**: Animaciones suaves y efectos hover
-- **Responsive**: Se adapta perfectamente a cualquier tamaño de pantalla
-- **Fuentes Web**: Tipografías elegantes de Google Fonts
-- **Interactividad**: Elementos con efectos al hacer clic
+## 📱 **Responsive Design**
 
-## 🔧 Resolución de Problemas
+Ambos proyectos están completamente optimizados para:
+- 💻 Desktop (1200px+)
+- 📱 Tablet (768px-1199px)
+- 📱 Mobile (hasta 767px)
 
-### El QR no funciona
-- Verifica que la URL sea correcta y accesible
-- Para uso local, asegúrate de que todos los archivos estén en la misma carpeta
-- Prueba el QR con diferentes apps de escaneo
+## 🎨 **Paleta de Colores**
 
-### El menú no se ve bien en móvil
-- Verifica que el archivo `css/styles.css` esté cargando correctamente
-- Asegúrate de tener conexión a internet para las fuentes de Google
-
-### Problemas con el script Python
-```bash
-# Instalar dependencias en macOS/Linux
-pip3 install qrcode[pil] pillow
-
-# En Windows
-pip install qrcode[pil] pillow
-```
-
-## 📞 Soporte
-
-Para personalización adicional o soporte técnico, contacta al desarrollador con los detalles específicos de tu implementación.
+- Dorado principal: `#d4af37`, `#ffd700`
+- Rosa elegante: `#ff6b9d`
+- Negros profundos: `#000000`, `#0a0a0a`, `#111111`
+- Blancos suaves: `#f5f3f0`, `#e8e0d0`
 
 ---
 
-### 🌟 ¡Disfruta tu menú digital!
-
-Este sistema te permitirá ofrecer una experiencia moderna y elegante a los clientes de Club Secret, facilitando el acceso al menú de bebidas de forma rápida y sin contacto.
+**© 2025 Club Pandora - Palma de Mallorca**
+*Elegancia • Exclusividad • Sofisticación*
